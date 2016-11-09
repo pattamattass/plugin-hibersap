@@ -38,6 +38,7 @@ import org.junit.rules.TemporaryFolder;
  * @author Max Schwaab
  *
  */
+@SuppressWarnings("deprecation")
 public class HibersapXMLManagerTest {
 
 	private String hibersapXMLStorePath;
@@ -59,8 +60,8 @@ public class HibersapXMLManagerTest {
 
 		this.manager.addSessionManager(sessionManagerConfig);
 
-		Assert.assertEquals(sessionManagerConfig, this.manager.getHibersapConfig()
-				.getSessionManager(sessionManagerName));
+		Assert.assertEquals(sessionManagerConfig,
+				this.manager.getHibersapConfig().getSessionManager(sessionManagerName));
 	}
 
 	@Test
